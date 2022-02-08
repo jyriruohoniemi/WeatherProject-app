@@ -8,15 +8,15 @@ An application for showing the local weather with some extra information on the 
 
 **Features**<br/>
 -Real time weather data based on location<br/>
--Windspeed<br/>
--Humidity<br/>
--Sunrise/Sunset<br/>
--Weekly forecast<br/>
+- Windspeed<br/>
+- Humidity<br/>
+- Sunrise/Sunset<br/>
+- Weekly forecast<br/>
 
 
 **Tech/framework used**<br/>
--React Native<<br/>
--OpenWeatherMap API<br/>
+- React Native<br/>
+- OpenWeatherMap API<br/>
 
 **Installation**<br/>
 To install, clone the repository and install by:

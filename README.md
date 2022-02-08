@@ -21,7 +21,7 @@ An application for showing the local weather with some extra information on the 
 **Installation**<br/>
 To install, clone the repository and install by:
 ```
-git clone https://github.com/jyriruohoniemi/WeatherPorject-app.git
+git clone https://github.com/jyriruohoniemi/WeatherProject-app.git
 WeatherPorject-app
 npm install
 ```

@@ -22,12 +22,12 @@ An application for showing the local weather with some extra information on the 
 To install, clone the repository and install by:
 ```
 git clone https://github.com/jyriruohoniemi/WeatherProject-app.git
-WeatherProject-app
+cd WeatherProject-app
 npm install
 ```
 After cloning and installing, you need to have the Expo CLI installed on your PC and the Expo Go app on your phone to test the application. Then run:
 ```
-npm start
+expo start
 and scan the given QR with your mobile phone
 ```
 **API Reference:**<br/>

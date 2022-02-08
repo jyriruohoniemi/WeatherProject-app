@@ -8,7 +8,7 @@ An application for showing the local weather with some extra information on the 
 
 **Features**<br/>
 -Real time weather data based on location<br/>
-- Windspeed<br/>
+- Wind speed<br/>
 - Humidity<br/>
 - Sunrise/Sunset<br/>
 - Weekly forecast<br/>

@@ -7,7 +7,7 @@ An application for showing the local weather with some extra information on the 
 </div>
 
 **Features**<br/>
--Real time weather data based on location<br/>
+- Real time weather data based on location<br/>
 - Wind speed<br/>
 - Humidity<br/>
 - Sunrise/Sunset<br/>

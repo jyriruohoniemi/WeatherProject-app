@@ -1,8 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import React, {useEffect, useState} from "react";
-import { StyleSheet, Text, View, ImageBackground } from "react-native"
-import * as Location from 'expo-location'
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import * as Location from 'expo-location';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from '@react-navigation/native';
 
+import AboutScreen from './components/AboutScreen';
 import DateTime from "./components/DateTime.js";
 import WeatherScroll from "./components/WeatherScroll.js";
 const API_KEY='c1380d829df4f0d3c65f9bdb10b33cee';
@@ -34,25 +38,48 @@ export default function App() {
       setData(data)
       })
     }
-
   }
-  //Use props to use the real time location data from the API
-  return (
-    <View style={styles.container}>
-      <ImageBackground source={img} style={styles.image}>
-        <DateTime current={data.current} timezone={data.timezone} lat={data.lat} lon={data.lon}/>
-        <WeatherScroll weatherData={data.daily}/>
-      </ImageBackground>
-    </View>
-  );
-}
+
+  const HomeScreen = () => { 
+    //Use props to use the real time location data from the API
+    return (  
+        <View style={styles.container}>
+        <ImageBackground source={img} style={styles.image}>
+          <DateTime current={data.current} timezone={data.timezone} lat={data.lat} lon={data.lon}/>
+          <WeatherScroll weatherData={data.daily}/>
+        </ImageBackground>
+      </View>
+    );  
+}  
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
+container: {
+  flex: 1,
+},
+image: {
+  flex: 1,
+  resizeMode: "cover",
+  justifyContent: "center",
+},
 });
+
+  const Tab = createBottomTabNavigator();
+
+  return (
+    <NavigationContainer>
+    <Tab.Navigator>
+
+    <Tab.Screen
+      name="Home and Forecast"
+      component={HomeScreen}
+    />
+
+    <Tab.Screen
+      name="About"
+      component={AboutScreen}
+    />
+
+    </Tab.Navigator>
+  </NavigationContainer>
+  )
+}
